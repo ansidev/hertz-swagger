@@ -21,9 +21,9 @@ Starting in Go 1.17, installing executables with `go get` is deprecated. `go ins
 go install github.com/swaggo/swag/cmd/swag@latest
 ```
 
-3. Run the [Swag](https://github.com/swaggo/swag) at your Go project root path(for instance `~/root/go-peoject-name`),
+3. Run the [Swag](https://github.com/swaggo/swag) at your Go project root path(for instance `~/root/go-project-name`),
    [Swag](https://github.com/swaggo/swag) will parse comments and generate required files(`docs` folder and `docs/doc.go`)
-   at `~/root/go-peoject-name/docs`.
+   at `~/root/go-project-name/docs`.
 
 ```sh
 swag init
@@ -41,7 +41,6 @@ Import following in your code:
 ```go
 import "github.com/hertz-contrib/swagger" // hertz-swagger middleware
 import "github.com/swaggo/files" // swagger embed files
-
 ```
 
 ### Canonical example:
@@ -54,7 +53,6 @@ func PingHandler(c context.Context, ctx *app.RequestContext) {
         "ping": "pong",
     })
 }
-
 ```
 
 So how to use hertz-swagger on api above? Just follow the following guide.
@@ -136,7 +134,6 @@ func main() {
 
 	h.Spin()
 }
-
 ```
 
 Demo project tree, `swag init` is run at relative `.`
@@ -153,6 +150,7 @@ Demo project tree, `swag init` is run at relative `.`
 ```
 
 ## Multiple APIs
+
 This feature was introduced in swag v1.7.9
 
 ## Configuration
